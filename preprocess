@@ -1,0 +1,3 @@
+#! /bin/bash
+
+python namsel.py preprocess ./data

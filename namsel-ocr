@@ -1,0 +1,4 @@
+#! /bin/bash
+
+python namsel.py $* ./data
+mv ocr_output.txt ./data
