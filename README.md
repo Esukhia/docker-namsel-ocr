@@ -1,5 +1,5 @@
 ### Running the container
-Put all the scan images in a directory in your local computer *~/data* (for instance) and run the image in background with the correct [version tag](https://cloud.docker.com/swarm/thubtenrigzin/repository/docker/thubtenrigzin/docker-namsel-ocr/tags):
+Put all the scan images in a directory in your local computer *~/data* (for instance) and run the image in background with the correct [version tag](https://hub.docker.com/r/thubtenrigzin/docker-namsel-ocr/tags):
 ```
 docker run -itd --name namsel -v ~/data:/home/namsel-ocr/data thubtenrigzin/docker-namsel-ocr:[tag] bash
 ```
