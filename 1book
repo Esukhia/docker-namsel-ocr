@@ -1,4 +1,10 @@
 #! /bin/bash
 
+if [ -z "$1" ]
+	then
+		python namsel.py preprocess ./data
+	else
+		python namsel.py preprocess --threshold=$1 ./data
+fi
 python namsel.py recognize-volume --format text --page_type book --line_break_method line_cut --clear_hr True ./data/out
 mv ocr_output.txt ./data

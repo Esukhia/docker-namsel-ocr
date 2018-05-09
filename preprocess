@@ -1,3 +1,8 @@
 #! /bin/bash
 
-python namsel.py preprocess ./data
+if [ -z "$1" ]
+	then
+		python namsel.py preprocess ./data
+	else
+		python namsel.py preprocess --threshold=$1 ./data
+fi
