@@ -1,4 +1,4 @@
 #! /bin/bash
 
-python namsel.py recognize-volume --format text --page_type book --line_break_method line_cut --clear_hr ./data/out
+python namsel.py recognize-volume --format text --page_type book --line_break_method line_cut --clear_hr True ./data/out
 mv ocr_output.txt ./data
