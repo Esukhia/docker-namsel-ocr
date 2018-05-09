@@ -6,6 +6,7 @@ docker run -itd --name namsel -v ~/data:/home/namsel-ocr/data thubtenrigzin/dock
 ### Running the scripts within the container:
 #### Preprocessing
 Scantaillor will prepare all the images stored in your local directory *~/data*.
+
 It is possible to add optionaly the threshold value.
 ```
 docker exec namsel ./preprocess [threshold value]
@@ -29,11 +30,14 @@ docker exec namsel ./namsel-ocr [parameter1 parameter2 etc...]
 
 #### Automatising the recognition with the preprocess included
 An all in one button for the book and pecha recognition.
+
 The threshold preprocess value can be optionaly add as a parameter.
+
 For the book recognition:
 ```
 docker exec namsel ./1book [threshold value]
 ```
+
 And for the Pecha recognition:
 ```
 docker exec namsel ./1pecha [threshold value]
