@@ -46,7 +46,7 @@ docker exec namsel ./1pecha [threshold value]
 #### Sources of docker-namsel-ocr
 Please refer to [namsel-ocr](https://github.com/thubtenrigzin/namsel-ocr) repository on Github for the source of the base built Docker image.
 
-All the Docker source will take place on [Docker-namsel-ocr](https://github.com/thubtenrigzin/docker-namsel-ocr) repository on Github.
+All the Docker source will take place on [docker-namsel-ocr](https://github.com/thubtenrigzin/docker-namsel-ocr) repository on Github.
 
 ### Realease notes:
 #### 02 tag
