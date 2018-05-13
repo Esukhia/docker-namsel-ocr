@@ -1,7 +1,11 @@
 ### Running the container
-Put all the scan images in a directory in your local computer *~/data* (for instance) and run the image in background with the correct [version tag](https://hub.docker.com/r/thubtenrigzin/docker-namsel-ocr/tags):
+Put all the scan images in a directory in your local computer [PATH] and run the image in background with the correct [version tag](https://hub.docker.com/r/thubtenrigzin/docker-namsel-ocr/tags):
 ```
-docker run -itd --name namsel -v ~/data:/home/namsel-ocr/data thubtenrigzin/docker-namsel-ocr:[tag] bash
+docker run -itd --name namsel -v [PATH]:/home/namsel-ocr/data thubtenrigzin/docker-namsel-ocr:[tag] bash
+```
+For example : Path = *~/data* and tag version = 03
+```
+docker run -itd --name namsel -v ~/data:/home/namsel-ocr/data thubtenrigzin/docker-namsel-ocr:03 bash
 ```
 ### Running the scripts within the container:
 #### Preprocessing
