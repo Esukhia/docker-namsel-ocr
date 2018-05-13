@@ -1,4 +1,12 @@
 #! /bin/bash
 
-python namsel.py recognize-volume --format text --page_type pecha --line_break_method line_cluster ./data/out
+if [ -d ./data/out ]; then
+   dir="./data/out"
+else
+   dir="./data"
+fi
+python namsel.py recognize-volume --format text --page_type pecha --line_break_method line_cluster $dir
 mv ocr_output.txt ./data
+if [ -d ./data/out ]; then
+   rm -R ./data/out
+fi

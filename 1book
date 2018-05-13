@@ -8,3 +8,4 @@ if [ -z "$1" ]
 fi
 python namsel.py recognize-volume --format text --page_type book --line_break_method line_cut --clear_hr True ./data/out
 mv ocr_output.txt ./data
+rm -R ./data/out

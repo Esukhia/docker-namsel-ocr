@@ -1,4 +1,12 @@
 #! /bin/bash
 
-python namsel.py $* ./data
+if [ -d ./data/out ]; then
+   dir="./data/out"
+else
+   dir="./data"
+fi
+python namsel.py $* $dir
 mv ocr_output.txt ./data
+if [ -d ./data/out ]; then
+   rm -R ./data/out
+fi

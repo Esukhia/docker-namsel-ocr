@@ -8,3 +8,4 @@ if [ -z "$1" ]
 fi
 python namsel.py recognize-volume --format text --page_type pecha --line_break_method line_cluster ./data/out
 mv ocr_output.txt ./data
+rm -R ./data/out

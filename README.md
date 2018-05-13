@@ -49,6 +49,10 @@ Please refer to [namsel-ocr](https://github.com/thubtenrigzin/namsel-ocr) reposi
 All the Docker source will take place on [docker-namsel-ocr](https://github.com/thubtenrigzin/docker-namsel-ocr) repository on Github.
 
 ### Realease notes:
+#### 03 tag
+- delete the directory "out" after the recognition completion
+- test if the "out" directory exists and uses the non-scantailored scan image if the preprocess has not been launched before the recognition
+
 #### 02 tag
 - add an "all in one button" for the book and pecha recognition, including the preprocessing stage
 - add the threshold parameter as an option for the preprocess
