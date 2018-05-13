@@ -3,7 +3,7 @@ Put all the scan images in a directory in your local computer [PATH] and run the
 ```
 docker run -itd --name namsel -v [PATH]:/home/namsel-ocr/data thubtenrigzin/docker-namsel-ocr:[tag] bash
 ```
-For example : Path = *~/data* and tag version = 03
+**For example** : *Path* = *~/data* and *tag version* = 03
 ```
 docker run -itd --name namsel -v ~/data:/home/namsel-ocr/data thubtenrigzin/docker-namsel-ocr:03 bash
 ```
