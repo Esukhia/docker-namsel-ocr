@@ -1,5 +1,5 @@
 ### Running the container
-Put all the scan images in a directory in your local computer [PATH] and run the image in background with the latest image version:
+Put all the scan images in a directory in your local computer [PATH] and run the image in the background with the latest image version:
 ```
 docker run -itd --name namsel -v [PATH]:/home/namsel-ocr/data thubtenrigzin/docker-namsel-ocr:latest bash
 ```
