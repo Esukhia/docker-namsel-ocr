@@ -1,11 +1,11 @@
 ### Running the container
-Put all the scan images in a directory in your local computer [PATH] and run the image in background with the correct [version tag](https://hub.docker.com/r/thubtenrigzin/docker-namsel-ocr/tags):
+Put all the scan images in a directory in your local computer [PATH] and run the image in background with the latest image version:
 ```
-docker run -itd --name namsel -v [PATH]:/home/namsel-ocr/data thubtenrigzin/docker-namsel-ocr:[tag] bash
+docker run -itd --name namsel -v [PATH]:/home/namsel-ocr/data thubtenrigzin/docker-namsel-ocr:latest bash
 ```
-**For example** : *Path* = *~/data* and *tag version* = 03
+**For example** : *Path* = *~/data* and latest *tag version* = latest
 ```
-docker run -itd --name namsel -v ~/data:/home/namsel-ocr/data thubtenrigzin/docker-namsel-ocr:03 bash
+docker run -itd --name namsel -v ~/data:/home/namsel-ocr/data thubtenrigzin/docker-namsel-ocr:latest bash
 ```
 ### Running the scripts within the container:
 #### Preprocessing
@@ -53,14 +53,14 @@ Please refer to [namsel-ocr](https://github.com/thubtenrigzin/namsel-ocr) reposi
 All the Docker source will take place on [docker-namsel-ocr](https://github.com/thubtenrigzin/docker-namsel-ocr) repository on Github.
 
 ### Realease notes:
-#### 03 tag
+#### v2.1.0 or latest
 - delete the directory "out" after the recognition completion
 - test if the "out" directory exists and uses the non-scantailored scan image if the preprocess has not been launched before the recognition
 
-#### 02 tag
+#### v2.0.0
 - add an "all in one button" for the book and pecha recognition, including the preprocessing stage
 - add the threshold parameter as an option for the preprocess
 - correcting an issue in book script file letting the book recognition work properly
 
-#### 01 tag
+#### v1.0.0
 First release of the project
