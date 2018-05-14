@@ -1,4 +1,4 @@
-FROM thubtenrigzin/namsel-ocr:trained-01
+FROM thubtenrigzin/namsel-ocr:trained-latest
 WORKDIR /home/namsel-ocr
 COPY preprocess .
 COPY pecha .
