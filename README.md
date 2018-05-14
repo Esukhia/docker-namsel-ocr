@@ -56,6 +56,7 @@ All the Docker source will take place on [docker-namsel-ocr](https://github.com/
 #### v2.1.0 or latest
 - delete the directory "out" after the recognition completion
 - test if the "out" directory exists and uses the non-scantailored scan image if the preprocess has not been launched before the recognition
+- use the tag "latest" for the basic image
 
 #### v2.0.0
 - add an "all in one button" for the book and pecha recognition, including the preprocessing stage
