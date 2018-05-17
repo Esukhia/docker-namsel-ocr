@@ -1,3 +1,4 @@
+All the images are uploaded on Docker hub in [docker-namsel-ocr](https://hub.docker.com/r/thubtenrigzin/docker-namsel-ocr/) public repository.
 ### Running the container
 Put all the scan images in a directory in your local computer [PATH] and run the image in the background with the latest image version:
 ```
