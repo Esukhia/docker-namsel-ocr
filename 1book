@@ -1,11 +1,49 @@
-#! /bin/bash
+#! /bin/bash -x
 
-if [ -z "$1" ]
+if [ $# -eq 2 ]
+then
+	if [[ $1 =~ ^-?[0-9]+$ ]] && [ $2 == "l2" ]
 	then
-		python namsel.py preprocess ./data
-	else
+		python namsel.py preprocess --threshold=$1 --layout double ./data
+	elif [ $1 == "l2" ] && [[ $2 =~ ^-?[0-9]+$ ]]
+	then
+		python namsel.py preprocess --threshold=$2 --layout double ./data
+	elif [ $1 == "l2" ] && [ $2 == "l2" ]
+	then
+		python namsel.py preprocess --layout double ./data
+	elif [[ $1 =~ ^-?[0-9]+$ ]] && [[ $2 =~ ^-?[0-9]+$ ]]
+	then
 		python namsel.py preprocess --threshold=$1 ./data
+	elif [ $1 == "l2" ]
+	then
+		python namsel.py preprocess --layout double ./data
+	elif [[ $1 =~ ^-?[0-9]+$ ]]
+	then
+		python namsel.py preprocess --threshold=$1 ./data
+	elif [ $2 == "l2" ]
+	then
+		python namsel.py preprocess --layout double ./data
+	elif [[ $2 =~ ^-?[0-9]+$ ]]
+	then
+		python namsel.py preprocess --threshold=$2 ./data
+	else
+		python namsel.py preprocess ./data
+	fi
+elif [ $1 == "l2" ]
+then
+	python namsel.py preprocess --layout double ./data
+elif [[ $1 =~ ^-?[0-9]+$ ]]
+then
+	python namsel.py preprocess --threshold=$1 ./data
+else
+	python namsel.py preprocess ./data
 fi
 python namsel.py recognize-volume --format text --page_type book --line_break_method line_cut --clear_hr True ./data/out
-mv ocr_output.txt ./data
-rm -R ./data/out
+if [ -f ./ocr_output.txt ]
+then
+	mv ocr_output.txt ./data
+fi
+if [ -d ./data/out ]
+then
+	rm -R ./data/out
+fi

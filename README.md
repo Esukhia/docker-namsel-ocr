@@ -12,9 +12,9 @@ docker run -itd --name namsel -v ~/data:/home/namsel-ocr/data thubtenrigzin/dock
 #### Preprocessing
 Scantaillor will prepare all the images stored in your local directory *~/data*.
 
-It is possible to add optionaly the threshold value.
+It is possible to add optionaly the threshold value and the double page layout by adding "l2".
 ```
-docker exec namsel ./preprocess [threshold value]
+docker exec namsel ./preprocess [threshold value] l2
 ```
 #### Recognition
 ##### Pecha format
@@ -36,11 +36,11 @@ docker exec namsel ./namsel-ocr [parameter1 parameter2 etc...]
 #### Automatising the recognition with the preprocess included
 An all in one button for the book and pecha recognition.
 
-The threshold preprocess value can be optionaly add as a parameter.
+The threshold preprocess value can be optionaly add as a parameter and the double page layout by adding "l2".
 
 For the book recognition:
 ```
-docker exec namsel ./1book [threshold value]
+docker exec namsel ./1book [threshold value] l2
 ```
 
 And for the Pecha recognition:
@@ -54,7 +54,13 @@ Please refer to [namsel-ocr](https://github.com/thubtenrigzin/namsel-ocr) reposi
 All the Docker source will take place on [docker-namsel-ocr](https://github.com/thubtenrigzin/docker-namsel-ocr) repository on Github.
 
 ### Realease notes:
-#### v2.1.0 or latest
+#### v2.2.0 or latest
+- add the preprocess argument "l2" for the double layout book
+- check if file or directory exist before the deleting or moving actions
+- stability improvements
+- The script ./namsel-ocr doesn't delete the directory ./data/out after the ocr completion
+
+#### v2.1.0
 - delete the directory "out" after the recognition completion
 - test if the "out" directory exists and uses the non-scantailored scan image if the preprocess has not been launched before the recognition
 - use the tag "latest" for the basic image

@@ -1,12 +1,16 @@
-#! /bin/bash
+#! /bin/bash -x
 
-if [ -d ./data/out ]; then
-   dir="./data/out"
+if [ $1 == "preprocess" ]
+then
+	dir="./data"
+elif [ -d ./data/out ]
+then
+	dir="./data/out"
 else
-   dir="./data"
+	dir="./data"
 fi
 python namsel.py $* $dir
-mv ocr_output.txt ./data
-if [ -d ./data/out ]; then
-   rm -R ./data/out
+if [ $1 != "preprocess" ] && [ -f ./ocr_output.txt ]
+then
+	mv ocr_output.txt ./data
 fi
